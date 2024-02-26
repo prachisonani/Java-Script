@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #data div img {
+            height: 200px;
+            width: 200px;
+        }
+        
+        #data {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .title {
+            color: gray;
+            background-color: FFC5C5;
+        }
+        
+        p {
+            font-size: 15px;
+        }
+        
+        input {
+            display: block;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form"><input type="text" placeholder="title" id="title"><input type="url" placeholder="img" id="img"><input type="number" placeholder="price" id="price"><input type="submit" value="add"></form>
+    <div id="data"></div>
+</body>
+<script src="index.js"></script>
+
+</html>
