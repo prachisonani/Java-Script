@@ -48,6 +48,25 @@ const handlesubmit = (e) => {
         price: price
 
     }
+    if (title.length < 3) {
+        alert("enter a valid title");
+
+        document.getElementById("t_title").style.color = "red";
+        document.getElementById("t_title").innerHTML = "enter a valid title";
+
+
+        return
+    }
+    if (price < 0) {
+        alert("enter a valid price");
+        let p = document.createElement("p");
+        p.innerHTML = "enter a valid price";
+
+
+        document.getElementById(t_title).append(p)
+
+        return
+    }
     products.push(product)
     show()
 

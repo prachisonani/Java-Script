@@ -43,9 +43,12 @@
 
 <body>
     <form id="form">
-        <input type="text" placeholder="title" id="title">
-        <input type="url" placeholder="img" id="img">
-        <input type="number" placeholder="price" id="price">
+        <input type="text" placeholder="title" id="title" required>
+        <p id="t_title">
+        </p>
+        <input type="url" placeholder="img" id="img" required>
+        <input type="number" placeholder="price" id="price" required>
+        <input type="text" placeholder="password" id="password" required>
         <input type="submit" value="add">
     </form>
     <div id="data"></div>
