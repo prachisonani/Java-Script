@@ -7,61 +7,155 @@
     <title>Document</title>
     <style>
         * {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #BC9EDF;
         }
-        
+
         .main {
             text-align: center;
             height: 100%;
             width: 100%;
             background-color: black;
-            padding-top: 50px;
+            padding: 50px 0;
         }
-        
-        #time-box {}
-        
+
+        #time-box {
+            width: 71%;
+            margin: auto;
+        }
+
         #year {
-            color: #DF826C;
+            color: #BC9EDF;
             font-size: 50px;
-            text-align: center;
-            font-weight: 600;
-        }
-        
-        p {
-            color: #DF826C;
             display: inline;
+            font-weight: 600;
+            text-shadow: 2px 2px 9px #BC9EDF;
         }
-        
+
+        p {
+            color: #BC9EDF;
+            font-size: 100px;
+            /* color: #DF826C; */
+            display: inline;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+        }
+
+        #Hour {
+            color: #BC9EDF;
+            position: absolute;
+            top: 460px;
+            left: 410px;
+            padding-right: 20px;
+            font-size: 40px;
+            background-color: black;
+        }
+
+        #min {
+            position: absolute;
+            color: #BC9EDF;
+            top: 460px;
+            right: 530px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 40px;
+            background-color: black;
+        }
+
         h3 {
-            color: #DF826C;
+            color: #bc9edfc4;
+            font-size: 70px;
+            font-weight: 470;
+            display: inline-block;
+
+        }
+
+        #sq {
+            font-size: 50px;
+            border: #BC9EDF solid 1px;
+            /* background-color: #BC9EDF; */
+            height: 300px;
+            width: 230px;
+            color: white;
+            border-radius: 10%;
+            line-height: 300px;
+            box-shadow: 0 0 20px #BC9EDF inset;
+        }
+
+        span {
+            color: #BC9EDF;
+            margin: 20px;
+            margin-top: 85px;
+            font-size: 80px;
+            text-shadow: 0px 0px 15px #e1c6ff;
+        }
+
+        #row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #ampm {
+            display: inline;
+            font-size: 40px;
+            margin-top: 240px;
+            margin-left: 20px;
+
+        }
+
+        pre {
+            font-size: 45px !important;
+            display: inline;
+            letter-spacing: 4px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 2px 2px 6px #e1c6ff;
+
+
         }
     </style>
 </head>
 
 <body>
     <div class="main">
+        <h3>Countdount <p id="year"></p>
+        </h3>
         <div id="time-box">
-            <p id="year" style="display: block;"></p>
-            <div id="crl">
-                <p id="Hours"></p>
+
+            <div id="row">
+
+                <div id="sq">
+                    <p id="Hours"></p>
+                </div>
+                <h4 id="Hour">Hour</h4>
+                <span>:</span>
+
+                <div id="sq">
+                    <p id="Minutes"> </p>
+                </div>
+                <h4 id="min">Min</h4>
+                <span>:</span>
+
+                <div id="sq">
+                    <p id="Seconds"></p>
+                </div>
+
+                <p id="ampm"></p>
+
+
             </div>
-
-
-            <p id="Minutes"></p>
-            <p id="Seconds"></p>
-            <p id="ampm"></p>
-
-
-
         </div>
+
+
         <div id="days-box">
-            <p id="days"></p>
-            <p id="months"></p>
-            <p id="date"></p>
+
+            <pre id="days"></pre>
+            <pre id="date" style="font-family: 'Times New Roman', Times, serif;"></pre>
+            <pre id="months"></pre>
+
 
 
         </div>
-        <h3>Countdount Timer</h3>
+
 
     </div>
 
