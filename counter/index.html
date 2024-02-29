@@ -5,14 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button {
+            background-color: #776B5D;
+            color: white;
+            padding: 30px 50px;
+            font-size: 20px;
+            border: none;
+        }
+        
+        button:hover {
+            box-shadow: 0 0 10px #EBE3D5 inset;
+        }
+        
+        .round {
+            width: 50%;
+            margin: 200px auto;
+            background-color: #F3EEEA;
+            text-align: center;
+            padding: 100px;
+            transition: all 0.5s;
+        }
+        
+        .round:hover {
+            box-shadow: 0 0 15px #776B5D;
+        }
+        
+        h1 {
+            color: #776B5D;
+            font-size: 70px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 id="count"></h1>
-    <button type="button" onclick="document.getElementById('count').innerHTML = counter">Try it</button>
+    <div class="round">
+        <h1 id="count"></h1>
+        <button id="try">Try it</button>
+    </div>
+
+
+
     <script>
-        let counter = 0;
-        counter++
+        let counter = 0
+        document.getElementById("count").innerHTML = counter
+
+
+        let button = document.getElementById("try"),
+            count = 0;
+        button.onclick = function() {
+            count += 1;
+            document.getElementById("count").innerHTML = count
+            button.innerHTML = "Try it";
+        };
     </script>
 </body>
 
