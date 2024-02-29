@@ -3,6 +3,7 @@ const d = new Date();
 
 //time
 let Hours = d.getHours();
+
 document.getElementById("Hours").innerHTML = Hours + ":";
 
 let Minutes = d.getMinutes();
